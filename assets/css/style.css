@@ -125,6 +125,14 @@
   box-sizing: border-box;
 }
 
+/*Added border Redius*/
+
+
+img, ion-icon, a, button, time, span {
+  display: block;
+  border-radius: inherit;
+}
+
 a { text-decoration: none; }
 
 li { list-style: none; }
