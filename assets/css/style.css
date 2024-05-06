@@ -1735,6 +1735,18 @@ textarea.form-input::-webkit-resizer { display: none; }
   gap: 7px;
 }
 
+.problem-solving-title-container .social-link img {
+  width: 35px;
+}
+
+h4.service-item-title2 a {
+  color: white;
+}
+
+h4.service-item-title2 a:hover {
+  color: var(--orange-yellow-crayola);
+}
+
 .problem-solving-footer {
   color: white;
   display: flex;
@@ -1770,6 +1782,15 @@ textarea.form-input::-webkit-resizer { display: none; }
   font-size: 18px;
 }
 
+
+/*
+* Gallery
+*/
+
+figure.project-img img {
+  width: 100%;
+  height: 300px;
+}
 
 
 /**

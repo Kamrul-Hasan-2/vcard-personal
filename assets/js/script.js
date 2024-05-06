@@ -157,3 +157,46 @@ for (let i = 0; i < navigationLinks.length; i++) {
 
   });
 }
+
+document.addEventListener('DOMContentLoaded', function() {
+
+  // Get all buttons
+  const buttons = document.querySelectorAll('.jinfo button');
+
+  // Get all list items
+  const listItems = document.querySelectorAll('.jlist');
+
+  // Show all list items by default
+  listItems.forEach(item => item.style.display = 'block');
+
+  // Button click event listener
+  buttons.forEach(button => {
+    button.addEventListener('click', function() {
+      // Get the target data attribute
+      const target = this.getAttribute('data-target');
+
+      // Change all buttons to 'jbtn2'
+      buttons.forEach(b => {
+        b.classList.remove('jbtn');
+        b.classList.add('jbtn2');
+      });
+
+      // Change the clicked button to 'jbtn'
+      this.classList.remove('jbtn2');
+      this.classList.add('jbtn');
+
+      // Show/hide list items based on the selected button
+      if (target === 'all') {
+        // Show all list items
+        listItems.forEach(item => item.style.display = 'block');
+      } else {
+        // Hide all list items
+        listItems.forEach(item => item.style.display = 'none');
+
+        // Show only the items that match the target
+        const targetItems = document.querySelectorAll(`.jlist.${target}`);
+        targetItems.forEach(item => item.style.display = 'block');
+      }
+    });
+  });
+});
